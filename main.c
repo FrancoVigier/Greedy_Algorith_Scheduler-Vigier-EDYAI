@@ -144,7 +144,7 @@ int greedy_de_actividades(GList grilla) {
   cantidadActividades = largo_glist(solucion);
 //Aplico la !es_solucion(solucion_Parcial)
   if (!(cantidadActividades > 0)) {
-//No encontró solucion set.vacio(), libero la memoria
+//No encontrÃ³ solucion set.vacio(), libero la memoria
 //de solamente los nodos de la glist y no de la data
 //es decir del esqueleto de la glist, porque sino
 //se me liberan los nodos de las actividades cuyo
@@ -161,15 +161,15 @@ int main()
     int cantidad, indice = 0;
     GList listaInterv = initialization_glist();
     printf("Inserte la cantidad de intervalos: ");
-    scanf("%d", &cantidad);
+    (void)scanf("%d", &cantidad);
 
     while (cantidad > 0) {
       int inicio, fin;
       printf("Inserte los datos del intervalo %i : ", ++indice);
       printf("\nInicio : ");
-      scanf("%d", &inicio);
+      (void)scanf("%d", &inicio);
       printf("Fin : ");
-      scanf("%d", &fin);
+      (void)scanf("%d", &fin);
       Intervalo* interv = malloc(sizeof(struct _Intervalo));
       interv->inicio = inicio;
       interv->ultimo = fin;
