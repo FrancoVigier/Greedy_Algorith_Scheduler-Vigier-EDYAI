@@ -156,9 +156,8 @@ int greedy_de_actividades(GList grilla) {
   return cantidadActividades;
 }
 
-int main()
-{
-    int cantidad, indice = 0;
+int main() {
+    int cantidad = 0, indice = 0;
     GList listaInterv = initialization_glist();
     printf("Inserte la cantidad de intervalos: ");
     if (scanf("%d", &cantidad)){}
