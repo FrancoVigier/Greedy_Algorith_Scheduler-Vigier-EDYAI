@@ -161,15 +161,15 @@ int main()
     int cantidad, indice = 0;
     GList listaInterv = initialization_glist();
     printf("Inserte la cantidad de intervalos: ");
-    if (scanf("%d", &cantidad));
+    if (scanf("%d", &cantidad)){}
 
     while (cantidad > 0) {
       int inicio, fin;
       printf("Inserte los datos del intervalo %i : ", ++indice);
       printf("\nInicio : ");
-      if (scanf("%d", &inicio));
+      if (scanf("%d", &inicio)){}
       printf("Fin : ");
-      if (scanf("%d", &fin));
+      if (scanf("%d", &fin)){}
       Intervalo* interv = malloc(sizeof(struct _Intervalo));
       interv->inicio = inicio;
       interv->ultimo = fin;
