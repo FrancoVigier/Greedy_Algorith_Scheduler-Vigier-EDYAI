@@ -10,13 +10,13 @@ all: default_target
 OBJECTS_GREEDY = $(patsubst %.c, compilados/.obj/%.o, $(wildcard *.c))
 HEADERS_GREEDY = $(wildcard *.h)
 
-compilados/.obj/%.o: %.c $(HEADERS_INTERPRETE)
+compilados/.obj/%.o: %.c $(HEADERS_GREEDY)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-.PRECIOUS: Greedy $(OBJECTS_INTERPRETE)
+.PRECIOUS: Greedy $(OBJECTS_GREEDY)
 
 Greedy: compilados compilados/.obj $(OBJECTS_GREEDY)
-	$(CC) $(OBJECTS_INTERPRETE) $(CFLAGS) -o compilados/$@
+	$(CC) $(OBJECTS_GREEDY) $(CFLAGS) -o compilados/$@
 
 compilados:
 	mkdir -p $@
